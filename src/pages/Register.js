@@ -3,6 +3,7 @@ import { FaUserAlt } from 'react-icons/fa';
 
 import { useNavigate } from 'react-router-dom';
 import { Post } from '../util/axios';
+import { Link } from 'react-router-dom';
 
 function Register() {
   const navigate = useNavigate();
@@ -116,6 +117,11 @@ function Register() {
           >
             Submit
           </button>
+        </div>
+        <div className='mb-3 row'>
+          <small>
+            Already have an account? <Link to='/login'> register </Link>
+          </small>
         </div>
       </form>
     </div>

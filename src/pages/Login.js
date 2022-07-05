@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaUserAlt } from 'react-icons/fa';
 import axiosInstance from '../AxiosInstance';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Post } from '../util/axios';
 
 function Login() {
@@ -93,6 +93,11 @@ function Login() {
           >
             Submit
           </button>
+        </div>
+        <div className='mb-3 row'>
+          <small>
+            Don't have an account? <Link to='/register'> register </Link>
+          </small>
         </div>
       </form>
     </div>
