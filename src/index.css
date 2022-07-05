@@ -1,13 +1,193 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 20px 25px;
+ /* height: 40px;*/
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  z-index: 1;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+nav.dark {
+  background-color: #21222A;
+}
+
+nav.dark .menu-icon{
+  color: #fff;
+}
+
+
+nav.dark .toggler p.toggler-light{
+  color: gray;
+}
+
+nav.dark .toggler p.toggler-dark{
+  color: #fff;
+}
+
+nav.dark a.nav-link{
+  color: #fff;
+}
+
+nav .toggler p.toggler-dark{
+  color: gray;
+}
+
+.toggler {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggler p {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0 0.5em;
+}
+
+.dark-icon{
+  color: #fff;
+  transform: rotate(180deg);
+}
+
+.light-icon{
+  color: #000 !important;
+  
+}
+
+.dark-icon, .light-icon{
+  font-size: 1.8em;
+  cursor: pointer;
+}
+
+button.btn.btn-outline-light:hover, button.btn.btn-outline-light{
+  background-color: transparent;
+}
+
+main.dark {
+  height: 100vh;
+  background-color: #282D35;
+  color: white;    
+}
+
+
+div.form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.user-icon{
+  font-size: 3em;
+}
+
+.form h2{
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: normal;
+  margin-top: 1em;
+}
+
+button#submit{
+  width: 100%;
+}
+
+form{
+  margin-left: 0.5em;
+  margin-right: 0.3em;
+}
+
+.note-detail{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3em;
+}
+
+.note-detail .note-content, .notes-list{
+  width: 60%;
+  white-space: pre-wrap;
+}
+
+.note-actions{
+  display: flex;
+  justify-content: space-around;
+}
+
+.icon{
+  font-size:1.5em;
+  color: #000;
+}
+
+.add-button{
+  font-size: 3em;
+  color: #000;
+}
+
+main.dark .add-button{
+  color: orange;
+}
+
+main.dark .icon{
+  color: #fff;
+}
+
+.note-title{
+  color: orange;
+  display: flex;
+  margin-bottom: 1em;
+  margin-top: 0.5em;
+}
+
+.note-title h2{
+  padding-left: 1em;
+}
+
+.floating-button{
+  position:fixed;
+  bottom:0;
+  right: 22em;
+  margin-bottom: 1em;
+}
+
+.search{
+  display: flex;
+  align-items: center;
+  background-color: rgb(233, 233, 233);
+  border-radius: 6px;
+  margin-bottom: 1em;
+  padding: 2px;
+}
+
+.search input{
+  background-color: transparent;
+  border: none;
+  padding-left: 5px;
+}
+
+.search input:focus{
+  outline: none;
+}
+
+input.form-control:focus, textarea.form-control:focus{
+  outline: 0;
+  box-shadow:none;
+}
+
+@media only screen and (max-width : 992px){
+  .note-detail .note-content, .notes-list{
+    width: 90%;
+  }
+
+  .floating-button{
+    right: 2em;
+  }
+
+  .note-detail .note-content, .notes-list{
+    width: 90%;
+  
+  }
 }
